@@ -5,10 +5,10 @@ from sqlalchemy import DateTime, String, Boolean, Enum as SQLEnum, Integer, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from models.enums import TipoLocalizacao  # Importado do enums.py
+from Models.enum import TipoLocalizacao  # Importado do enums.py
 
 if TYPE_CHECKING:
-    from models.lote import Lote
+    from Models.lote import Lote
 
 
 class Localizacao(Base):
