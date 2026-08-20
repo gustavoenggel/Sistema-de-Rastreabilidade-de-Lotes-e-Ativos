@@ -1,5 +1,5 @@
 from enum import Enum
-
+from Database.conexao import Base  # Importa a classe Base do conexao.py
 
 class StatusLote(str, Enum):
     DISPONIVEL = "DISPONIVEL"

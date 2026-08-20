@@ -1,8 +1,18 @@
 import os
 import psycopg
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 load_dotenv() #carrega automaticamente as variaveis existentes no .env
+
+DATABASE_URL = "postgresql://usuario:senha@localhost:5432/nome_do_banco"
+
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+class Base(DeclarativeBase):
+    pass
 
 class Conexao:
     def __init__(self):

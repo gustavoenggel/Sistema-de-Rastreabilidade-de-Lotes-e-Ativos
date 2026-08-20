@@ -1,3 +1,5 @@
+from Database.conexao import Base  # Importa a classe Base do conexao.py
+
 import uuid
 from datetime import datetime
 from typing import TYPE_CHECKING, List, Optional
