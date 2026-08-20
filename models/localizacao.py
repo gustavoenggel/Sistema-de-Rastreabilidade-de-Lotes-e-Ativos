@@ -4,11 +4,11 @@ from typing import TYPE_CHECKING, List, Optional
 from sqlalchemy import DateTime, String, Boolean, Enum as SQLEnum, Integer, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-
-from models.enums import TipoLocalizacao  # Importado do enums.py
+from Database.conexao import Base  # Importa a classe Base do conexao.py
+from Models.enum import TipoLocalizacao  # Importado do enums.py
 
 if TYPE_CHECKING:
-    from models.lote import Lote
+    from Models.lote import Lote
 
 
 class Localizacao(Base):
